@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll</title>
+    <!-- favicon -->
+    <!-- <link rel="icon" type="img/png" href="https://www.google.com/s2/favicons?domain=css-tricks.com"> use favicon from an existing website -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Title -->
+    <h1>UNSPLASH API - INFINITE SCROLL</h1>
+    <!-- Form to select image category -->
+    <form id="topic-form" target="_self">
+        <label for="topic-selector">Choose a topic:</label>
+        <select name="topics" id="topic-selector">
+            <option value="all" selected>All</option>
+        </select>
+        <button type="button" id="submit-button">Submit</button>
+    </form>
+    <div class="loader-and-images" id="loader-and-images">
+        <div class="empty-state" id="empty-state">
+            <h3>Choose a topic to view photos!</h3>
+        </div>
+        <!-- Loading animation -->
+        <div class="ring-loader" id="ring-loader" hidden>
+            <img src="ringLoader.svg" alt="Loading">
+        </div>
+
+        <!-- Image containter -->
+        <div class="image-container" id="image-container">
+        </div>
+    </div>
+    <!-- Loader attribution -->
+    <footer>
+        <a href="https://loading.io/" class="attribution">Loading animation courtesy of loading.io</a>
+    </footer>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

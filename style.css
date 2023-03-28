@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+html {
+    box-sizing: border-box; /* prevents padding from adding height or width to page outside of view */
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Michroma', sans-serif;
+    background-color: whitesmoke;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+footer {
+    font-size: 8px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+form {
+    font-size: 12px;
+    text-align: center;
+    margin: 25px 0px;
+}
+
+form button {
+    font-size: 12px;
+}
+
+.empty-state {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.loader-and-images {
+    position: relative;
+}
+
+/* Ring Loader */
+.ring-loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.8)
+}
+
+/* Put the loader in the middle of the page */
+.ring-loader img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centers the image rather than the upper-left of the image */
+}
+
+/* Image container */
+.image-container {
+    margin: 10px 30%;
+}
+
+.image-container img {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Media Query: Smartphone */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 11px;
+    }
+
+    .image-container {
+        margin: 15px;
+    }
+
+    form, form button {
+        font-size: 10px;
+    }
+
+    .empty-state {
+        margin-top: 100px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+}
